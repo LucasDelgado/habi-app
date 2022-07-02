@@ -1,0 +1,78 @@
+{
+  "steps": [
+    {
+      "id": 3,
+      "path": "datos-cliente",
+      "component": {
+        "name": "text-input",
+        "title": "Nombre y apellido"
+      },
+      "order": 2,
+      "description": "completa tus datos",
+      "required": true,
+      "payloadRef": ""
+    },
+    {
+      "id": 1,
+      "path": "datos-inmueble",
+      "component": {
+        "name": "text-input",
+        "title": "Datos del inmueble",
+        "maxLength": 50,
+        "type": "text"
+      },
+      "order": 1,
+      "description": "los datos de tu inmueble",
+      "required": true,
+      "payloadRef": ""
+    },
+    {
+      "id": 1122,
+      "path": "opciones-dpto",
+      "component": {
+        "name": "checkbox-group",
+        "title": "opciones del Dto",
+        "options": [
+          {
+            "value": "Zona-BBQ",
+            "label": "Zona BBQ"
+          },
+          {
+            "value": "salon-comunal",
+            "label": "salón comunal"
+          },
+          {
+            "value": "parque-de-juegos",
+            "label": "parque de juegos"
+          }
+        ]
+      },
+      "order": 3,
+      "description": "los datos de tu inmueble",
+      "required": true,
+      "payloadRef": ""
+    },
+    {
+      "id": 1122,
+      "path": "detalles-inmueble",
+      "component": {
+        "name": "radioinput-group",
+        "title": "tiene Ascensor",
+        "options": [
+          {
+            "value": "si",
+            "label": "si"
+          },
+          {
+            "value": "no",
+            "label": "no"
+          }
+        ]
+      },
+      "order": 3,
+      "description": "los datos de tu inmueble",
+      "required": true,
+      "payloadRef": ""
+    }
+  ]
+}
