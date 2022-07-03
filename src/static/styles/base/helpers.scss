@@ -1,0 +1,89 @@
+//=============================
+// HELPERS MARGINS
+//=============================
+
+.st--mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.st--mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.st--mb-15 {
+  margin-bottom: 15px !important;
+}
+
+.st--mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.st--mb-30 {
+  margin-bottom: 30px !important;
+}
+
+.st--mb-45 {
+  margin-bottom: 45px !important;
+}
+
+.st--mb-60 {
+  margin-bottom: 45px !important;
+}
+
+.st--mt-15 {
+  margin-top: 15px;
+}
+
+//=============================
+// HELPERS ALIGNS
+//=============================
+.st--text-center {
+  text-align: center;
+}
+.st--text-right {
+  text-align: right;
+}
+
+//=============================
+// HELPERS COLORS
+//=============================
+
+.st--cl-blue-hard {
+  color: var(--blue-hard);
+}
+
+.st--f-bold {
+  font-weight: bold;
+}
+
+//=============================
+// HELPERS FLEX
+//=============================
+
+.st--d-flex {
+  display: flex;
+}
+
+//=============================
+// HELPERS FONTS
+//=============================
+.st--f-size-13 {
+  font-size: 13px;
+}
+
+.st-callToAction {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 15px 60px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: var(--main-color-hard);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+}

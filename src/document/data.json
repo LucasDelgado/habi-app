@@ -1,37 +1,57 @@
 {
   "steps": [
     {
-      "id": 3,
-      "path": "datos-cliente",
+      "id": 3234234,
+      "path": "nombre-cliente",
       "component": {
         "name": "text-input",
-        "title": "Nombre y apellido"
+        "required": true
       },
-      "order": 2,
-      "description": "completa tus datos",
-      "required": true,
-      "payloadRef": ""
-    },
-    {
-      "id": 1,
-      "path": "datos-inmueble",
-      "component": {
-        "name": "text-input",
-        "title": "Datos del inmueble",
-        "maxLength": 50,
-        "type": "text"
-      },
+      "payloadRef": "nombreCliente",
       "order": 1,
-      "description": "los datos de tu inmueble",
-      "required": true,
-      "payloadRef": ""
+      "description": "Nombre y apellido"
     },
     {
-      "id": 1122,
+      "id": 34234,
+      "path": "correo-cliente",
+      "component": {
+        "name": "text-input",
+        "required": true,
+        "type": "email"
+      },
+      "payloadRef": "correoData",
+      "order": 2,
+      "description": "Correo"
+    },
+    {
+      "id": 3234,
+      "path": "direccion-cliente",
+      "component": {
+        "name": "text-input",
+        "required": true
+      },
+      "payloadRef": "direccionData",
+      "order": 3,
+      "description": "direccion"
+    },
+    {
+      "id": 3231114,
+      "path": "dto-piso-cliente",
+      "component": {
+        "name": "text-input",
+        "required": true,
+        "type": "number",
+        "max": 50
+      },
+      "payloadRef": "dtoPisoData",
+      "order": 4,
+      "description": "piso del departamento"
+    },
+    {
+      "id": 22,
       "path": "opciones-dpto",
       "component": {
         "name": "checkbox-group",
-        "title": "opciones del Dto",
         "options": [
           {
             "value": "Zona-BBQ",
@@ -45,19 +65,82 @@
             "value": "parque-de-juegos",
             "label": "parque de juegos"
           }
-        ]
+        ],
+        "required": true
       },
-      "order": 3,
-      "description": "los datos de tu inmueble",
-      "required": true,
-      "payloadRef": ""
+      "order": 5,
+      "payloadRef": "opcionesDpto",
+      "description": "que tiene tu inmueble"
     },
     {
-      "id": 1122,
+      "id": 111112222,
       "path": "detalles-inmueble",
       "component": {
+        "name": "has-parcadero",
+        "questions": [
+          {
+            "description": "¿Tiene parcadero?",
+            "id": "parcadero",
+            "options": [
+              {
+                "value": "si",
+                "label": "si"
+              },
+              {
+                "value": "no",
+                "label": "no"
+              }
+            ]
+          },
+          {
+            "description": "¿Es cubierto?",
+            "id": "cubierto",
+            "options": [
+              {
+                "value": "si",
+                "label": "si"
+              },
+              {
+                "value": "no",
+                "label": "no"
+              }
+            ]
+          }
+        ]
+      },
+      "order": 6,
+      "required": true,
+      "payloadRef": "has-parcadero"
+    },
+    {
+      "id": 1,
+      "path": "precio-inmueble",
+      "component": {
+        "name": "moneda-input",
+        "currency": "USD",
+        "type": "number"
+      },
+      "order": 7,
+      "description": "precio del inmueble",
+      "required": true,
+      "payloadRef": "precio"
+    },
+    {
+      "id": 1126782,
+      "path": "subir-imagen",
+      "component": {
+        "name": "image-input",
+        "required": true
+      },
+      "payloadRef": "image",
+      "order": 8,
+      "description": "la imagen de tu inmueble"
+    },
+    {
+      "id": 3132,
+      "path": "tiene-ascensor",
+      "component": {
         "name": "radioinput-group",
-        "title": "tiene Ascensor",
         "options": [
           {
             "value": "si",
@@ -69,10 +152,10 @@
           }
         ]
       },
-      "order": 3,
-      "description": "los datos de tu inmueble",
+      "order": 9,
+      "description": "¿tiene ascensor?",
       "required": true,
-      "payloadRef": ""
+      "payloadRef": "ascensor"
     }
   ]
 }

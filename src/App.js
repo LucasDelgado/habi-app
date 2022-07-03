@@ -1,14 +1,14 @@
-import { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import ErrorBoundary from "./components/errorBoundary/ErrorBoundary";
 import Layout from "./components/layout/Layout";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound";
 import Step from "./pages/Steps/Step";
 import data from "./document/data.json";
 import orderArray from "./utils/orderArray";
-import StepsWrapper from "./pages/Steps/StepsWrapper";
+import Steps from "./pages/Steps/Steps";
 import Felicitaciones from "./pages/Felicitaciones";
+import "./static/styles/styles.scss";
 
 function App() {
   const { steps } = data;
@@ -18,7 +18,6 @@ function App() {
     <div className="App">
       <ErrorBoundary>
         <Layout>
-          <h1>Hola Usuario</h1>
           <Routes>
             <Route
               path="/"
@@ -26,7 +25,7 @@ function App() {
             />
             <Route
               path="/steps"
-              element={<StepsWrapper pageDataOrdened={pageDataOrdened} />}
+              element={<Steps pageDataOrdened={pageDataOrdened} />}
             >
               {pageDataOrdened.map((step) => (
                 <Route

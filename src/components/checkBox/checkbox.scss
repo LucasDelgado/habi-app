@@ -1,0 +1,7 @@
+.checkbox {
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  & > input {
+    height: 18px;
+  }
+}

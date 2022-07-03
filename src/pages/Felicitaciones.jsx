@@ -1,10 +1,18 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
+import renderPreviwMachine from "../utils/renderPreviewMachine";
 
-const Felicitaciones = (props) => {
-  return <div>Felicitaciones</div>;
+const Felicitaciones = () => {
+  const stepsState = useSelector((state) => state.steps);
+  const { steps } = stepsState;
+
+  return (
+    <div>
+      <h1>Felicitaciones!</h1>
+      <p>tus datos enviados son estos:</p>
+      {renderPreviwMachine(steps)}
+    </div>
+  );
 };
-
-Felicitaciones.propTypes = {};
 
 export default Felicitaciones;

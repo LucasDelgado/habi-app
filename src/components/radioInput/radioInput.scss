@@ -1,0 +1,7 @@
+.radio-input {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  & > input {
+    height: 18px;
+  }
+}

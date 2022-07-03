@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "./home.scss";
+
 const Home = ({ firstStepData }) => {
   return (
-    <div>
-      <h1>Home</h1>
-      <Link to={`/steps/${firstStepData.path}`}>Vender</Link>
+    <div className="home">
+      <Link className="st-callToAction" to={`/steps/${firstStepData.path}`}>
+        Vender
+      </Link>
     </div>
   );
 };

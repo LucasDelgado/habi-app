@@ -1,0 +1,43 @@
+.steps {
+  display: grid;
+  margin-top: 20px;
+  align-items: flex-start;
+  @media (min-width: 769px) {
+    grid-template-columns: 1fr 300px;
+    grid-gap: 20px;
+  }
+  &__main {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    &__form {
+      width: 100%;
+      max-width: 500px;
+      border: 1px solid var(--neutral-light);
+      border-radius: 4px;
+      padding: 20px;
+      margin: 0 15px;
+      & > div {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+      }
+      &__submit {
+        margin-top: 20px;
+        background-color: var(--main-color);
+        color: #fff;
+        border-radius: 4px;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          background-color: var(--main-color-hard);
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

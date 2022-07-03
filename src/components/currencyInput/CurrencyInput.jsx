@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
 
-const TextInput = ({ data }) => {
+const CurrencyInput = ({ data }) => {
   const { description, payloadRef, component } = data;
 
   const [inputState, setInputState] = useOutletContext();
@@ -13,34 +14,42 @@ const TextInput = ({ data }) => {
       val: e.target.value,
       ref: payloadRef,
       nameComponent: component.name,
+      currency: component.currency,
       description,
     });
 
   return (
-    <label>
-      {description}
+    <div>
+      <p>{description}</p>
+      <span>{component.currency}</span>{" "}
       <input
-        className={"st--textInput"}
-        type={component.type}
+        type="number"
         name={payloadRef}
         onChange={handleChange}
         value={inputState.val || ""}
         required={component.required}
-        max={component.max}
       />
-    </label>
+    </div>
   );
 };
 
-TextInput.propTypes = {
+CurrencyInput.propTypes = {
   data: PropTypes.shape({
     description: PropTypes.string.isRequired,
     payloadRef: PropTypes.string.isRequired,
     component: PropTypes.shape({
       name: PropTypes.string.isRequired,
-      type: PropTypes.string,
+      currency: PropTypes.string,
     }).isRequired,
   }).isRequired,
 };
 
-export default TextInput;
+CurrencyInput.defaultProps = {
+  data: {
+    component: {
+      currency: "USD",
+    },
+  },
+};
+
+export default CurrencyInput;
