@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 const CurrencyInput = ({ data }) => {
   const { description, payloadRef, component } = data;
+  console.log(data);
 
   const [inputState, setInputState] = useOutletContext();
 

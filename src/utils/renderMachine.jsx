@@ -5,15 +5,16 @@ import RadioInputGroup from "../components/radioInput/RadioInputGroup";
 import HasParcadero from "../components/hasParcadero/HasParcadero";
 import CurrencyInput from "../components/currencyInput/CurrencyInput";
 import ImageInput from "../components/imageInput/ImageInput";
+import stepDataComponentAdapter from "../adapter/stepDataComponentAdapter";
 
 const renderMachine = (step) => {
   const { component, payloadRef, description } = step;
 
-  const data = {
+  const data = stepDataComponentAdapter({
     description,
     component,
     payloadRef,
-  };
+  });
 
   const defaultElemnt = (
     <p>Ha ocurrido un error al renderizar el campo a completar.</p>

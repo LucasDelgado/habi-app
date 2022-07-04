@@ -31,7 +31,7 @@ const ImageInput = ({ data }) => {
 
 ImageInput.propTypes = {
   data: PropTypes.shape({
-    description: PropTypes.string.isRequired,
+    description: PropTypes.string,
     payloadRef: PropTypes.string.isRequired,
     component: PropTypes.shape({
       name: PropTypes.string.isRequired,
