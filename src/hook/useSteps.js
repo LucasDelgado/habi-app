@@ -13,29 +13,33 @@ const useSteps = (pageDataOrdened, inputState, setInputState) => {
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
+    try {
+      //add store
+      dispatch(nextStep());
+      dispatch(
+        addStep({
+          ...inputState,
+        })
+      );
 
-    //add store
-    dispatch(nextStep());
-    dispatch(
-      addStep({
-        ...inputState,
-      })
-    );
+      //service localstorage
+      localStorageService.set("steps", {
+        steps: [...stepsState.steps, inputState],
+        page: stepsState.page + 1,
+      });
 
-    //service localstorage
-    localStorageService.set("steps", {
-      steps: [...stepsState.steps, inputState],
-      page: stepsState.page + 1,
-    });
+      //clean states inputs
+      setInputState({});
 
-    //clean states inputs
-    setInputState({});
-
-    //navigate to next page
-    if (page === "final") {
-      navigate("/resumen");
-    } else {
-      navigate(`/steps/${page.path}`);
+      //navigate to next page
+      if (page === "final") {
+        navigate("/resumen");
+      } else {
+        navigate(`/steps/${page.path}`);
+      }
+    } catch (error) {
+      console.log(error);
+      navigate("/error");
     }
   };
 

@@ -8,6 +8,7 @@ import data from "./document/data.json";
 import orderArray from "./utils/orderArray";
 import Steps from "./pages/Steps/Steps";
 import Felicitaciones from "./pages/Felicitaciones";
+import Error from "./pages/Error";
 import "./static/styles/styles.scss";
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
               ))}
             </Route>
             <Route path="/resumen" element={<Felicitaciones />} />
+            <Route path="/error" element={<Error />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
