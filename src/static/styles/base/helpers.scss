@@ -35,16 +35,6 @@
 }
 
 //=============================
-// HELPERS ALIGNS
-//=============================
-.st--text-center {
-  text-align: center;
-}
-.st--text-right {
-  text-align: right;
-}
-
-//=============================
 // HELPERS COLORS
 //=============================
 
@@ -57,19 +47,8 @@
 }
 
 //=============================
-// HELPERS FLEX
+// CALL TO ACTION
 //=============================
-
-.st--d-flex {
-  display: flex;
-}
-
-//=============================
-// HELPERS FONTS
-//=============================
-.st--f-size-13 {
-  font-size: 13px;
-}
 
 .st-callToAction {
   background-color: var(--main-color);
